@@ -2,6 +2,8 @@
 
 A simple RPN calculator with basic functions written in golang.
 
+Does not current support float values :(
+
 ## Installation
 
 If you have golang installed and have added `$GOBIN` to path, you can simply install using `make install`.
