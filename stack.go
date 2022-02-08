@@ -1,7 +1,7 @@
 package main
 
 type node struct {
-	value int
+	value float64
 	next  *node
 }
 
@@ -13,11 +13,11 @@ func newStack() *stack {
 	return &stack{nil}
 }
 
-func (s *stack) Push(value int) {
+func (s *stack) Push(value float64) {
 	s.top = &node{value: value, next: s.top}
 }
 
-func (s *stack) Pop() int {
+func (s *stack) Pop() float64 {
 	if s.top == nil {
 		return -1
 	}
@@ -26,7 +26,7 @@ func (s *stack) Pop() int {
 	return value
 }
 
-func (s *stack) Peek() int {
+func (s *stack) Peek() float64 {
 	if s.top == nil {
 		return -1
 	}

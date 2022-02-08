@@ -12,9 +12,9 @@ func Test_Constructor(t *testing.T) {
 	}
 }
 
-func TestParse(t *testing.T) {
-	expected := 36
-	actual, err := newCalculator().parse(strings.Split("6 6 *", " "))
+func TestParseRPN(t *testing.T) {
+	expected := float64(36)
+	actual, err := newCalculator().parseRPN(strings.Split("6 6 *", " "))
 	if err != nil {
 		t.Errorf("Expected no error, got %v", err)
 	}

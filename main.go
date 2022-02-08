@@ -7,10 +7,10 @@ import (
 
 func main() {
 	calc := newCalculator()
-	result, err := calc.parse(os.Args[1:])
+	result, err := calc.parseRPN(os.Args[1:])
 	if err != nil {
 		fmt.Println(err)
 		os.Exit(1)
 	}
-	fmt.Println(result)
+	fmt.Printf("%f\n", result)
 }
